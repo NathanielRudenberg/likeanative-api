@@ -1,0 +1,17 @@
+{
+  "name": "likeanative-api",
+  "version": "0.1.0",
+  "description": "REST backend for LikeANative",
+  "license": "ISC",
+  "author": "Nathaniel Rudenberg",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}
