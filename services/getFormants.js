@@ -1,8 +1,8 @@
 import { promises as fs } from 'fs';
-import { frontendRoot } from './env.js';
+import { frontendRoot, audioDir } from './env.js';
 
 export default async function getFormants(language) {
-  const filePath = `${frontendRoot}/public/audio/${language}/vowel_formants.json`;
+  const filePath = `${frontendRoot}/${audioDir}/${language}/vowel_formants.json`;
 
   try {
     const data = await fs.readFile(filePath, 'utf8');
