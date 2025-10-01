@@ -1,8 +1,10 @@
 import express from "express";
+import cors from 'cors';
 import getFormants from "./services/getFormants.js";
 
 const app = express();
-app.use(express.json());
+// app.use(express.json());
+app.use(cors());
 
 const PORT = process.env.PORT || 3050;
 
@@ -22,7 +24,6 @@ app.get('/vowel-formants/:language', async (request, response) => {
   const language = request.params.language;
 
   const formants = await getFormants(language);
-
 
   response.json(formants);
 })
